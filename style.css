@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color:rgb(29, 106, 207);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    z-index: 1;
+}
+.logo{
+    position: relative;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+    margin-left: 40px;
+}
+
+header ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+header ul li:hover{
+    border-bottom: 4px solid white;
+
+}
+
+main{
+    background-image: url(images/img7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner .imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.banner .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+    background-position: center;
+}
+
+.banner .imgBox img.active{
+    opacity: 1;
+}
+
+.controls{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 80px;
+    transform: translateY(-50%);
+}
+
+.controls li{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.controls li:hover{
+    background-color: rgb(29, 106, 207);
+}
+
+.controls li::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    transform: rotate(45deg);
+}
+
+.controls li:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    transform: rotate(225deg) translateX(5px) translateY(-5px);
+}
+
+.contentBox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contentBox div{
+    display: none;
+}
+
+.contentBox div.active{
+    display: block;
+    padding: 30px;
+    padding-left: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contentBox div h2{
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Questrial', sans-serif;
+}
+
+
+.contentBox div p{
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.contentBox div a{
+    color: #111;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px ;
+    background-color:#fff;
+    margin-top: 10px;
+    margin-left: 40%;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url(svg/play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.play.pause {
+    background-image: url("svg/pause.svg");
+}
+
+.play:hover {
+    filter: invert(50%);
+    cursor: pointer;
+}
+
+.video{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color:rgb(10, 60, 134);
+    position: relative;
+}
+
+.eurovision{
+  color: #93afe5;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  left: 265px;
+  top: 45px;
+}
+
+.site{
+    margin-left: 25%;
+}
+
+.little{
+    margin-left: 40%;
+}
+
+.firsts{
+    margin-left: 35%;
+}
+
+.seconds{
+    margin-left: 35%;
+}
+
+.thirds{
+    margin-left: 35%;
+}
+
+.fourths{
+    margin-left: 35%;
+}
+
+
+.fifths{
+    margin-left: 35%;
+}
+
+
+.github{
+    width: 50px;
+    height: 50px;
+    margin-left: 80%;
+    margin-top: 25px;
+}
